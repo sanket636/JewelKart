@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
-
+# from pathlib import Path
 from pathlib import Path
 import os
 
@@ -21,18 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / ".env")
 
-
-# from pathlib import Path
-
-# # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-yb%n+87_=76s33wq#j^%xiq@!v#8t7*x&bo6x_^ufbvd6no@i)'
+SECRET_KEY = 'django-insecure-$^hd1#7ythg2v=6t766p%7amzwp$#74nlyfkt#mxsue^%3^ase'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -49,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # PostgreSQL support
+     # PostgreSQL support
     'django.contrib.postgres',
 
     # REST Framework
@@ -59,6 +52,8 @@ INSTALLED_APPS = [
     # Our applications
     'store',
     'api',
+    
+
 ]
 
 MIDDLEWARE = [
@@ -76,7 +71,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,7 +95,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
 DATABASES = {
 
     'default': {

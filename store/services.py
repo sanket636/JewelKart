@@ -17,7 +17,6 @@ ZERO = Decimal(
     '0.00'
 )
 
-
 def get_current_customer(
     user
 ):
@@ -40,12 +39,12 @@ def get_current_customer(
         )
         .first()
     )
-    
-    def calculate_variant_price(
+
+def calculate_variant_price(
     variant
 ):
 
-     metal_rate = (
+    metal_rate = (
         variant
         .metal
         .rate_per_gram
